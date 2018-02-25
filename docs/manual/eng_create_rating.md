@@ -82,7 +82,7 @@ class Rating extends XFCP_Rating
 		return $types;
 	}
 }
-`` `
+```
 Now go to the administrator control panel, to the page `Extensions of classes` and create an extension, where` Base class name` is specified `\SXFRating\Repository\Rating`, and where` Expansion class name` is specified `SpaceofYourAddOn\XF\Repository\Rating` , select the shan plug and save.
 6. Now we need to create a template `test_user_message`, which we specified in the handler. I will not describe its contents, but I think you will understand.
 ```html
