@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language title="Russian (RU)" date_format="j M Y" time_format="H:i" currency_format="&quot;{value}&quot;{symbol}" week_start="1" decimal_point="." thousands_separator="," label_separator=":" comma_separator=", " ellipsis="..." parenthesis_open="(" parenthesis_close=")" language_code="ru-RU" text_direction="LTR" addon_id="SXFRating" export_version="2">
+  <phrase title="nav.sxfr" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Рейтинги]]></phrase>
+  <phrase title="option.sxfr" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Включить рейтинги]]></phrase>
+  <phrase title="option_explain.sxfr" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[]]></phrase>
+  <phrase title="option_group.sxfr" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[[SXF] Rating]]></phrase>
+  <phrase title="option_group_description.sxfr" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[]]></phrase>
+  <phrase title="permission.sxfr_viewRating" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Просмотр рейтингов]]></phrase>
+  <phrase title="permission_interface.sxfr" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[[SXF] Rating]]></phrase>
+  <phrase title="sxfr_rating" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Рейтинг]]></phrase>
+  <phrase title="sxfr_rating_is_not_exists" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Рейтингов не обнаружено!]]></phrase>
+  <phrase title="sxfr_ratings" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Рейтинги]]></phrase>
+  <phrase title="sxfr_userlike" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Симпатии пользователей]]></phrase>
+  <phrase title="sxfr_usermessage" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Сообщения пользователей]]></phrase>
+  <phrase title="sxfr_userpoint" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Баллы пользователей]]></phrase>
+  <phrase title="sxfr_userresource" addon_id="SXFRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Ресурсы пользователей]]></phrase>
+</language>

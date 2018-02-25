@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+  <navigation_entry navigation_id="sxfr" display_order="300" navigation_type_id="basic" enabled="1"><![CDATA[{"link":"{{ link('ratings') }}","display_condition":"$xf.visitor.canViewRating()","extra_attributes":[]}]]></navigation_entry>
+</navigation>

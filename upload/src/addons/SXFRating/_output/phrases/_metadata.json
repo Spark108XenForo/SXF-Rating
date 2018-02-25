@@ -1,0 +1,86 @@
+{
+    "nav.sxfr.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "e8dcd33ae274522f351c266f028eed7b"
+    },
+    "option.sxfr.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "34766630db8397b7443c261d8558f70a"
+    },
+    "option_explain.sxfr.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "option_group.sxfr.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "35ca7a008287f57aa0fde567180d2b50"
+    },
+    "option_group_description.sxfr.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "permission.sxfr_viewRating.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "cd8e3ad13988cb376ac49f9eec0068e9"
+    },
+    "permission_interface.sxfr.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "35ca7a008287f57aa0fde567180d2b50"
+    },
+    "sxfr_rating.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "dda9c06f33071c9b6fc237ee164109d8"
+    },
+    "sxfr_rating_is_not_exists.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "1c9684418cb0a6a5048c097c9259fdb6"
+    },
+    "sxfr_ratings.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "e8dcd33ae274522f351c266f028eed7b"
+    },
+    "sxfr_userlike.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "a7152814638682a22c6abfa2be1b080f"
+    },
+    "sxfr_usermessage.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9923eadd7797d48b455b527041c90016"
+    },
+    "sxfr_userpoint.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "1144ed9339f1c527be9953215362155a"
+    },
+    "sxfr_userresource.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "f910871d2587b214c9733155059a375b"
+    }
+}

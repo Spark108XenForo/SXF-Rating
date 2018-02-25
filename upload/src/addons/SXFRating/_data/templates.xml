@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="sxfr_rating.less" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[.rating
+{
+	.dataList-cell .is-match 
+	{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.rating-top 
+{
+	&--visitor 
+	{
+    	outline: 1px #ff0000 solid;
+	}
+	
+	&--1
+	{
+		background-color: #ffd700;
+		
+		&:hover
+		{
+			background-color: #ffdc33 !important;
+		}
+		
+		td
+		{
+			border: none;
+		}
+	}
+	&--2
+	{
+		background-color: #c0c0c0;
+		
+		&:hover
+		{
+			background-color: #bbbbbb !important;
+		}
+		
+		td
+		{
+			border: none;
+		}
+	}
+	&--3
+	{
+		background-color: #cd7f32;
+		
+		&:hover
+		{
+			background-color: #cd853f !important;
+		}
+		
+		td
+		{
+			border: none;
+		}
+	}
+}
+
+.rating-list
+{
+	.rating-item 
+	{
+		display: inline-grid;
+		text-decoration: none;
+    	font-weight: bold;
+		transition: .5s;
+		margin: 5px;
+		
+		&:hover 
+		{
+			transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			-moz-transform: scale(1.1);
+			
+			.icon
+			{
+				transform: rotate(360deg);
+				-ms-transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+			}
+		}
+		
+		.block-body
+		{
+			width: 200px;
+			height: 200px;
+			text-align: center;
+		}
+		
+		.icon 
+		{
+			padding: 20px;
+			color: #21c0e6;
+		    transition: .5s;
+		}
+		.title 
+		{
+			padding: 15px;
+		}
+	}
+}]]></template>
+  <template type="public" title="sxfr_rating_list" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[<xf:title>{{ phrase('sxfr_ratings') }}</xf:title>
+
+<xf:css src="sxfr_rating.less" />
+
+<xf:if is="$ratings is not empty">
+	<div class="rating-list">
+		<xf:foreach loop="{$ratings}" value="$rating">
+			<xf:macro name="rating_item" arg-rating="{$rating}" />
+		</xf:foreach>
+	</div>
+<xf:else />
+	<div class="block">
+		<div class="block-container">
+			<div class="block-body">
+				<div class="block-row">
+					{{ phrase('sxfr_rating_is_not_exists') }}
+				</div>
+			</div>
+		</div>
+	</div>
+</xf:if>
+
+<xf:macro name="rating_item" arg-rating="!">
+	<a class="block rating-item" href="{{ link('ratings', null, {'type':$rating.type,'limit':'50'}) }}">
+		<div class="block-container">
+			<div class="block-body">
+				<div class="icon">
+					<xf:macro name="rating_item_icon" arg-rating="{$rating}" />
+				</div>
+				<div class="title">{$rating.title}</div>
+			</div>
+		</div>
+	</a>
+</xf:macro>
+
+<xf:macro name="rating_item_icon" arg-rating="!">
+	<xf:if is="$rating.hasFaIcon()">
+		<i class="fa {$rating.icon} fa-5x" aria-hidden="true"></i>
+	<xf:elseif is="$rating.hasIcon()" />
+		<img src="{{ link('ratings/icon', null, {'type':$rating.type}) }}" alt="{$rating.title}" />
+	</xf:if>
+</xf:macro>]]></template>
+  <template type="public" title="sxfr_rating_view" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[<xf:title>{$rating.title} - {{ phrase('sxfr_rating') }}</xf:title>
+
+<xf:css src="sxfr_rating.less" />
+
+<div class="block rating">
+	<div class="block-outer">
+		<xf:macro template="sxfr_rating_macros" name="quick_filter" arg-key="rating" arg-class="block-outer-opposite"
+			arg-type="{$type}"/>
+	</div>
+	
+	<div class="block-container">
+		{$rating.html|raw}
+	</div>
+</div>]]></template>
+  <template type="public" title="sxfr_userlike" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[<xf:datalist>
+	<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+		<xf:cell>#</xf:cell>
+		<xf:cell>{{ phrase('name') }}</xf:cell>
+		<xf:cell>{{ phrase('likes') }}</xf:cell>
+	</xf:datarow>
+	
+	<xf:foreach loop="{$users}" key="$key" value="$user">
+		<xf:datarow rowclass="rating-user--{$key} rating-top--{$key} {{ $xf.visitor.user_id == $user.user_id ? 'rating-top--visitor' : '' }}">
+			<xf:cell>{$key}</xf:cell>
+			<xf:cell>
+				<xf:username user="{$user}" />
+			</xf:cell>
+			<xf:cell>{$user.like_count|number}</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+</xf:datalist>]]></template>
+  <template type="public" title="sxfr_usermessage" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[<xf:datalist>
+	<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+		<xf:cell>#</xf:cell>
+		<xf:cell>{{ phrase('name') }}</xf:cell>
+		<xf:cell>{{ phrase('messages') }}</xf:cell>
+	</xf:datarow>
+	
+	<xf:foreach loop="{$users}" key="$key" value="$user">
+		<xf:datarow rowclass="rating-message--{$key} rating-top--{$key} {{ $xf.visitor.user_id == $user.user_id ? 'rating-top--visitor' : '' }}">
+			<xf:cell>{$key}</xf:cell>
+			<xf:cell>
+				<xf:username user="{$user}" />
+			</xf:cell>
+			<xf:cell>
+				<a href="{{ link('search/member', null, {'user_id': $user.user_id}) }}">{$user.message_count|number}</a>
+			</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+</xf:datalist>]]></template>
+  <template type="public" title="sxfr_userpoint" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[<xf:datalist>
+	<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+		<xf:cell>#</xf:cell>
+		<xf:cell>{{ phrase('name') }}</xf:cell>
+		<xf:cell>{{ phrase('points') }}</xf:cell>
+	</xf:datarow>
+	
+	<xf:foreach loop="{$users}" key="$key" value="$user">
+		<xf:datarow rowclass="rating-message--{$key} rating-top--{$key} {{ $xf.visitor.user_id == $user.user_id ? 'rating-top--visitor' : '' }}">
+			<xf:cell>{$key}</xf:cell>
+			<xf:cell>
+				<xf:username user="{$user}" />
+			</xf:cell>
+			<xf:cell>
+				<a data-xf-click="overlay" href="{{ link('members/trophies', $user) }}">{$user.trophy_points|number}</a>
+			</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+</xf:datalist>]]></template>
+  <template type="public" title="sxfr_userresource" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[<xf:datalist>
+	<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+		<xf:cell>#</xf:cell>
+		<xf:cell>{{ phrase('name') }}</xf:cell>
+		<xf:cell>{{ phrase('nav.xfrm') }}</xf:cell>
+	</xf:datarow>
+	
+	<xf:foreach loop="{$users}" key="$key" value="$user">
+		<xf:datarow rowclass="rating-message--{$key} rating-top--{$key} {{ $xf.visitor.user_id == $user.user_id ? 'rating-top--visitor' : '' }}">
+			<xf:cell>{$key}</xf:cell>
+			<xf:cell>
+				<xf:username user="{$user}" />
+			</xf:cell>
+			<xf:cell>
+				<a href="{{ link('resources/authors', $user) }}">{$user.xfrm_resource_count|number}</a>
+			</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+</xf:datalist>]]></template>
+</templates>

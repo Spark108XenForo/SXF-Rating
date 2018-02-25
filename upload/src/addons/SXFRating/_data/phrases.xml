@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="nav.sxfr" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Ratings]]></phrase>
+  <phrase title="option.sxfr" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Enable ratings]]></phrase>
+  <phrase title="option_explain.sxfr" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[]]></phrase>
+  <phrase title="option_group.sxfr" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[[SXF] Rating]]></phrase>
+  <phrase title="option_group_description.sxfr" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[]]></phrase>
+  <phrase title="permission.sxfr_viewRating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[View ratings]]></phrase>
+  <phrase title="permission_interface.sxfr" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[[SXF] Rating]]></phrase>
+  <phrase title="sxfr_rating" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Rating]]></phrase>
+  <phrase title="sxfr_rating_is_not_exists" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[No ratings found!]]></phrase>
+  <phrase title="sxfr_ratings" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[Ratings]]></phrase>
+  <phrase title="sxfr_userlike" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[User Likes]]></phrase>
+  <phrase title="sxfr_usermessage" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[User messages]]></phrase>
+  <phrase title="sxfr_userpoint" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[User Points]]></phrase>
+  <phrase title="sxfr_userresource" version_id="1000011" version_string="1.0.0 Alpha 1"><![CDATA[User resources]]></phrase>
+</phrases>

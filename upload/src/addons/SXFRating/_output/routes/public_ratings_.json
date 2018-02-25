@@ -1,0 +1,11 @@
+{
+    "route_type": "public",
+    "route_prefix": "ratings",
+    "sub_name": "",
+    "format": "",
+    "build_class": "",
+    "build_method": "",
+    "controller": "SXFRating:Rating",
+    "context": "sxfr",
+    "action_prefix": ""
+}

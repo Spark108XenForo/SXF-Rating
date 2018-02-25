@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="sxfr" edit_format="callback" data_type="array">
+    <default_value>[]</default_value>
+    <edit_format_params>SXFRating\Option\Rating::render</edit_format_params>
+    <sub_options>*</sub_options>
+    <relation group_id="sxfr" display_order="1"/>
+  </option>
+</options>

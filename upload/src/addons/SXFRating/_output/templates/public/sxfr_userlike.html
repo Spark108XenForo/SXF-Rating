@@ -1,0 +1,17 @@
+<xf:datalist>
+	<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
+		<xf:cell>#</xf:cell>
+		<xf:cell>{{ phrase('name') }}</xf:cell>
+		<xf:cell>{{ phrase('likes') }}</xf:cell>
+	</xf:datarow>
+	
+	<xf:foreach loop="{$users}" key="$key" value="$user">
+		<xf:datarow rowclass="rating-user--{$key} rating-top--{$key} {{ $xf.visitor.user_id == $user.user_id ? 'rating-top--visitor' : '' }}">
+			<xf:cell>{$key}</xf:cell>
+			<xf:cell>
+				<xf:username user="{$user}" />
+			</xf:cell>
+			<xf:cell>{$user.like_count|number}</xf:cell>
+		</xf:datarow>
+	</xf:foreach>
+</xf:datalist>

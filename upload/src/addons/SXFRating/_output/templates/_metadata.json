@@ -1,0 +1,37 @@
+{
+    "public/sxfr_rating.less": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "976a43059050789db3663c3be8480c19"
+    },
+    "public/sxfr_rating_list.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "71cbfbf1836a0ef21fcd23d1d1a42714"
+    },
+    "public/sxfr_rating_view.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "d93ac9f00f6aab2cc8d042a04f6e96c0"
+    },
+    "public/sxfr_userlike.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "5e1c88594731244f9e3050e495bb6505"
+    },
+    "public/sxfr_usermessage.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "431760c159a26bb17e5d50dc34f1765e"
+    },
+    "public/sxfr_userpoint.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "29da6906079b4ea9fd9f5b89398c1433"
+    },
+    "public/sxfr_userresource.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "146b4befec239e151fd6484efc129a1d"
+    }
+}
