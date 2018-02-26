@@ -7,7 +7,7 @@ Page with different ratings.
 * Number of messages.
 * Number of points.
 
-You can also create your own ratings. [/docs/manual/eng_create_rating.md](How to create ratings?)
+You can also create your own ratings. [How to create ratings?](/docs/manual/eng_create_rating.md)
 
 ----
 
@@ -19,4 +19,4 @@ You can also create your own ratings. [/docs/manual/eng_create_rating.md](How to
 * Кол-во сообщений.
 * Кол-во баллов.
 
-Также имеется возможность создавать свои рейтинги. [/docs/manual/rus_create_rating.md](Как создавать рейтинги?)
+Также имеется возможность создавать свои рейтинги. [Как создавать рейтинги?](/docs/manual/rus_create_rating.md)

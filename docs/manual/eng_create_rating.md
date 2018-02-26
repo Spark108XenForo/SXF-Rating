@@ -8,7 +8,8 @@ So. Let's start.
 2. Go to the folder of the created add-on and create the folder `Rating`.
 In the folder `Rating` all our ratings will be located.
 3. Create a test rating, say `Message rating` (Of course, this is already there, but for example, you can). To do this, create a file `TestUserMessage.php` with the following content (All code is described in the comments):
-```<?php
+```php
+<?php
 
 namespace SpaceofyourAddOn\Rating;
 
@@ -66,7 +67,8 @@ class TestUserMessage extends AbstractRating // We connect the abstract class.
 ```
 This concludes with the handler.
 4. Now we need to register our handler. Create the address `XF \ Repository` in our plugin folder. In the destination folder, create the file `Rating.php` with the following content:
-```<?php
+```php
+<?php
 
 namespace SpaceofYourAddOn\XF\Repository;
 
@@ -80,10 +82,10 @@ class Rating extends XFCP_Rating
 		return $types;
 	}
 }
-`` `
+```
 Now go to the administrator control panel, to the page `Extensions of classes` and create an extension, where` Base class name` is specified `\SXFRating\Repository\Rating`, and where` Expansion class name` is specified `SpaceofYourAddOn\XF\Repository\Rating` , select the shan plug and save.
 6. Now we need to create a template `test_user_message`, which we specified in the handler. I will not describe its contents, but I think you will understand.
-```
+```html
 <xf:datalist>
 	<xf:datarow rowtype="subsection" rowclass="dataList-row--noHover">
 		<xf:cell>#</xf:cell>
