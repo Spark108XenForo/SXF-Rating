@@ -18,20 +18,39 @@ class UserMessage extends AbstractRating
 	{
 		$limit = $this->getLimit();
 		
-		$users = $this->finder('XF:User')->order('message_count', 'DESC')->limit($limit)->fetch();
-		
-		$list = array_values($users->toArray());
-		$newList = [];
-		
-		for ($i = 0; $i < count($list); $i++)
-		{
-			$newList[$i + 1] = $list[$i];
-		}
+		$users = $this->userFinder()->limit($limit)->fetch()->toArray();
+		$users = array_values($users);
 		
 		$viewParams = [
-			'users' => $newList
+			'users' => $users
 		];
 		
+		$visitor = \XF::visitor();
+		
+		if ($visitor->user_id)
+		{
+			$users = $this->userFinder()->fetch()->toArray();
+			$users = array_values($users);
+			
+			foreach ($users as $key => $user)
+			{
+				if ($user->user_id == $visitor->user_id)
+				{
+					$viewParams['visitor'] = [
+						'user' => $user,
+						'key' => $key + 1
+					];
+					
+					break;
+				}
+			}
+		}
+		
 		return $this->renderer('sxfr_usermessage', $viewParams);
+	}
+	
+	protected function userFinder()
+	{
+		return $this->finder('XF:User')->order('message_count', 'DESC');
 	}
 }

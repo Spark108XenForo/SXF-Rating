@@ -7,11 +7,25 @@
 	}
 }
 
-.rating-top 
+.rating-item
 {
-	&--visitor 
+	&--visitor
 	{
-    	outline: 1px #ff0000 solid;
+		&.dataList-row
+		{
+			&.dataList-row--subSection
+			{
+				.dataList-cell
+				{
+					background-color: #a78926;
+					color: white;
+					border-bottom: none;
+					font-size: 15px;
+					border-bottom: 5px #ececec solid;
+					border-top: 5px #ececec solid;
+				}
+			}
+		}
 	}
 	
 	&--1
@@ -102,6 +116,32 @@
 		.title 
 		{
 			padding: 15px;
+		}
+	}
+}
+
+/** For mobile. */
+@media (max-width: @xf-responsiveWide) 
+{
+	.rating-list
+	{
+		.rating-item 
+		{
+			display: block;
+			
+			&:hover 
+			{
+				transform: none;
+				-ms-transform: none;
+				-webkit-transform: none;
+				-o-transform: none;
+				-moz-transform: none;
+			}
+			
+			.block-body 
+			{
+				width: 100%;
+			}
 		}
 	}
 }

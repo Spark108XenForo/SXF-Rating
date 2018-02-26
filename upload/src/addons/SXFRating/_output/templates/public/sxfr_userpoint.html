@@ -5,14 +5,30 @@
 		<xf:cell>{{ phrase('points') }}</xf:cell>
 	</xf:datarow>
 	
+	<xf:if is="{$visitor}">
+		<xf:datarow rowtype="subsection" rowclass="rating-item--visitor dataList-row--noHover">
+			<xf:cell>{$visitor.key}</xf:cell>
+			<xf:cell>
+				<xf:username user="{$visitor.user}" />
+			</xf:cell>
+			<xf:cell>
+				<a data-xf-click="overlay" href="{{ link('members/trophies', $user) }}">
+					{$visitor.user.trophy_points|number}
+				</a>
+			</xf:cell>
+		</xf:datarow>
+	</xf:if>
+	
 	<xf:foreach loop="{$users}" key="$key" value="$user">
-		<xf:datarow rowclass="rating-message--{$key} rating-top--{$key} {{ $xf.visitor.user_id == $user.user_id ? 'rating-top--visitor' : '' }}">
-			<xf:cell>{$key}</xf:cell>
+		<xf:datarow rowclass="rating-item--{{ $key + 1 }}">
+			<xf:cell>{{ $key + 1 }}</xf:cell>
 			<xf:cell>
 				<xf:username user="{$user}" />
 			</xf:cell>
 			<xf:cell>
-				<a data-xf-click="overlay" href="{{ link('members/trophies', $user) }}">{$user.trophy_points|number}</a>
+				<a data-xf-click="overlay" href="{{ link('members/trophies', $user) }}">
+					{$user.trophy_points|number}
+				</a>
 			</xf:cell>
 		</xf:datarow>
 	</xf:foreach>

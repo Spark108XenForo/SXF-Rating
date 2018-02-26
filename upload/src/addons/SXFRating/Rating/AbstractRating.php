@@ -21,6 +21,16 @@ abstract class AbstractRating
 		return \XF::phrase('sxfa_rating');
 	}
 	
+	public function getIcon()
+	{
+		return '';
+	}
+	
+	public function getTemplate()
+	{
+		return '';
+	}
+	
 	public function getLimit()
 	{
 		$limit = $this->app->request->filter('limit', 'int');
@@ -31,11 +41,6 @@ abstract class AbstractRating
 		}
 		
 		return $limit;
-	}
-	
-	public function getIcon()
-	{
-		return '';
 	}
 	
 	public function complete($responseType = 200)

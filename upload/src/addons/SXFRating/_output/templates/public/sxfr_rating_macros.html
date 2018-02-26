@@ -1,0 +1,22 @@
+<xf:macro name="quick_filter" arg-key="" arg-ajax="" arg-class="" arg-type="!">
+	<xf:js src="xf/filter.js" min="1">
+		jQuery.extend(XF.phrases, {
+		no_items_matched_your_filter: "{{ phrase('no_items_matched_your_filter')|escape('js') }}",
+		});
+	</xf:js>
+	
+	<div class="{$class} quickFilter u-jsOnly" data-xf-init="filter" data-key="{$key}" data-ajax="{$ajax}">
+		<div class="inputGroup inputGroup--inline inputGroup--joined">
+			<a class="inputGroup-text" href="{{ link('ratings', null, {'type':$type,'limit':25}) }}">25</a>
+			<a class="inputGroup-text" href="{{ link('ratings', null, {'type':$type,'limit':50}) }}">50</a>
+			<a class="inputGroup-text" href="{{ link('ratings', null, {'type':$type,'limit':100}) }}">100</a>
+			<a class="inputGroup-text" href="{{ link('ratings', null, {'type':$type,'limit':250}) }}">250</a>
+			<a class="inputGroup-text" href="{{ link('ratings', null, {'type':$type,'limit':500}) }}">500</a>
+			<input type="text" class="input js-filterInput" placeholder="{{ phrase('filter...') }}" data-xf-key="{{ phrase('shortcut.filter') }}" />
+			<xf:checkbox standalone="true">
+				<xf:option labelclass="inputGroup-text" class="js-filterPrefix" label="{{ phrase('prefix') }}" />
+			</xf:checkbox>
+			<i class="inputGroup-text js-filterClear is-disabled" aria-hidden="true"></i>
+		</div>
+	</div>
+</xf:macro>

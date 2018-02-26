@@ -16,7 +16,9 @@ class Rating extends Repository
 			
 		]);
 		
-		if (class_exists('\XFRM\Setup'))
+		$xfrmAddOn = \XF::em()->find('XF:AddOn', 'XFRM');
+		
+		if ($xfrmAddOn)
 		{
 			$ratings['user_resource'] = 'SXFRating:UserResource';
 		}
